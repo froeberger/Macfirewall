@@ -14,7 +14,7 @@ This is my first upload to github so sorry if I did it wrong.
 Jennifer Ruurs
 
 ```
-    scrub-anchor "com.apple/*"
+scrub-anchor "com.apple/*"
 nat-anchor "com.apple/*"
 rdr-anchor "com.apple/*"
 dummynet-anchor "com.apple/*"
@@ -53,17 +53,4 @@ antispoof quick for $ext_if
 
 # Allow in web traffic
 pass proto tcp from any to $ext_if port $webports
-
-# Allow essential outgoing traffic
-pass out quick on $ext_if proto tcp to any port $needout
-pass out quick on $ext_if proto udp to any port $needout
-
-# Allow TURN/STUN traffic
-pass in quick proto udp from any to $ext_if port $turn
-pass in quick proto tcp from any to $ext_if port $turn
-pass in quick proto tcp from any to $ext_if port $turns
-
-pass out quick on $ext_if proto udp to any port $turn
-pass out quick on $ext_if proto tcp to any port $turn
-pass out quick on $ext_if proto tcp to any port $turns
 ```
