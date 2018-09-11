@@ -11,6 +11,8 @@ If you have any suggestions on how I can make my firewall more secure (by limiti
 
 This is my first upload to github so sorry if I did it wrong.
 
+On of the things I would like to archieve is that people on the same network can not contact me.
+
 Jennifer Ruurs
 
 ```
