@@ -19,8 +19,7 @@ These files come verbatim from a working PF installation on the most current ver
 You might wonder about the 'Zer0rez' referrence -- it is an antiquated and long ago defunct hacker crew I was once a founding member of whose specialties were to remain unrecognized and leave no traces and denying a target the use of their own systems.   It is also a pun on 'Zorro', as we were 'Zero' or better yet 'zError'.  I am Mexican American.
 
 
-Allow me a few hours -- I will tonight ensure that your desired spec is matched by the config for this firewall.  I suspect that it exceeds what you intended for yours, in a way which affords you greater protection.  
-
+This firewall exceeds your design spec in every way, offering better protection.  And it works -- parts of it have been derived by experience gained via 'trial-by-fire' in the course of my professional life as a systems engineer / administrator at some high-profile and disliked target sites (yeah, I actually was the secret engineer nobody talks about at ResponseBase LLC, a major player in spam years ago)...
 
 =-=-=-=-=-=-=-=-=-=-=-=--=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -51,14 +50,14 @@ Next, test loading the zer0rez firewall into PF via
 If everything works up to this point, then congratulate yourself -- we are almost home free.  All that remains is to register the zer0rez firewall with launchd so that it is automatically enabled and activated in the startup process...
      
 
-I am hoping that we don't need to reboot to single user and disable some system security service to do this, but will refresh my memory if need be, if the following fails for you:
+We are likely going to need to reboot into single user mode to disable a system security service in order to register the service in the system context / domain.  This will likely fail, but attempt each in any event and please report to me what errors might occur:
 
      sudo launchctl bootstrap system/net.zer0rez.firewall
      sudo launchctl enable system/net.zer0rez.firewall
      sudo launchctl kickstart -kp system/net.zer0rez.firewall
      
      
-Whew!...
+Finally, you may contact me at get.busy.with.froeberger@gmail.com.  I will add a file to this repository called LaunchRegistration.txt after you email me the output of the three commands above.
 
 
 Take care,
